@@ -273,6 +273,53 @@ pensativa mirando a los lados · selfie caminando en la calle (Bloque E: manos a
 
 ---
 
+# 👕 PLAYERA CON PRINT GRANDE EN LA ESPALDA (persona de espaldas, atardecer)
+
+## G21 — Hombre de espaldas mirando el horizonte + se acomoda la playera (cámara handheld del que graba)
+**Contexto:** foto UGC/lifestyle vertical al atardecer: hombre de espaldas con gorra negra, playera negra
+oversize con print GRANDE en la espalda (palabra gótica blanca + figura de estatua alada con alas
+azules y listones), jeans anchos, guardarraíl y colinas al fondo con sol poniente. Se pide: que mire el
+horizonte, se acomode un poco la playera, cambie el peso de un pie a otro, y que la cámara se mueva
+natural (acercarse un poco, alejarse, moverse a la derecha) — estilo del prompt del carro (G22 ref).
+
+**Riesgos de ESTA imagen y cómo se blindan:**
+1. **Se da la vuelta / se le ve la cara** → riesgo #1 al pedirle que "mire" algo. Bloque
+   `HE NEVER TURNS AROUND` + la cámara **NUNCA orbita** a su costado/frente.
+2. **Las ALAS del print** = motion-cue altísimo (primo de banderas: quieren aletear/desplegarse) y la
+   **cara impresa** del ángel = imán clásico → `PRINTED ART LOCK` nombrando alas + cara + listones.
+3. **Mano sobre el print** (FALLO #7: oclusión = alucina gráficos) → la mano toca SOLO el **dobladillo
+   de abajo, al costado, sobre tela lisa**, nunca cubre el diseño + `ONE HAND ONLY` + no inventar gráficos.
+4. **Cámara en movimiento** (aquí SÍ se permite: el texto "LEAL" es grande y limpio, no hay letra
+   diminuta) → pero con `ANTI-OUTPAINT` porque el desplazamiento lateral revela área nueva.
+5. **Tela que ondula** al acomodarse → `FABRIC` controlado para que el print no se estire.
+**Modelo:** 3.0 (texto grande y limpio). Si las alas/la cara del ángel cobran vida → 2.6.
+
+```
+Image-to-video animation prompt for Kling. Use the uploaded photo as the exact reference frame. A natural, real-time lifestyle clip filmed handheld from behind: the man keeps his back to the camera the whole time, slowly raises his head to look out at the sunset horizon, gives his t-shirt a small settling tug at the hem and shifts his weight from one foot to the other, while the camera moves gently as if another person is filming him with a phone. NOT a multi-shot video and NOT a recreated scene. One continuous composition. DURATION: ~6 seconds, natural real-time speed, not slow motion.
+HE NEVER TURNS AROUND (most important rule): The man is seen from BEHIND for the entire clip, exactly as in the reference frame. He does NOT turn around, turn his body, pivot, swivel, rotate, or face the camera at any moment, and his face is NEVER visible — not in profile, not over his shoulder, not even partially. Only the back of his cap, the back of his head, his back and his arms are ever seen. He also stays in exactly the same spot: he does NOT walk, step, lean over the guardrail, or change his standing position or distance from the camera.
+ACTION SEQUENCE — the ONLY body motion (in this order): First he slowly and calmly lifts his head from looking down to looking straight ahead, out at the sunset horizon in front of him — a small, natural head movement, still facing completely away from the camera. Then ONE hand comes down and gives the bottom hem of his t-shirt a small natural tug at his side, settling the shirt, and returns to his pocket. Then he shifts his body weight from one foot to the other, a relaxed everyday weight shift, and settles. Calm, natural, controlled, real-time — like someone standing quietly taking in the view.
+ONE HAND ONLY — no new hand (critical): Only ONE hand does the tug, and it is one of the hands already visible in the reference. Do NOT add, introduce, or generate a second, other, or extra hand, arm, or extra fingers at any point. Keep both hands and all fingers natural, anatomically correct and undistorted; the other hand stays as it is in the reference.
+TOUCH ONLY PLAIN FABRIC — no invented graphics (critical): The hand touches ONLY the plain bottom hem at the SIDE of the shirt, low and away from the printed graphic — it does NOT reach onto, cover, press, hide, or slide across the print. The printed design stays fully visible, flat and undistorted the whole time. Do NOT draw, add, create, generate, paint, sketch, or invent any new shape, line, pattern, letter, logo or graphic anywhere on the shirt; when the hand moves, everything on the shirt stays EXACTLY the original.
+PRINTED ART LOCK — the back graphic is a frozen flat print (critical): The entire graphic printed on the back of the t-shirt — the large white gothic word across the top, the pale winged classical statue figure, its pale blue feathered wings, the object it holds across its body, and the cream and blue flowing ribbons around it — is a FLAT, FROZEN, PRINTED INK LAYER on the fabric. The wings do NOT flap, beat, spread, open, close, ripple, or move in any way. The printed figure does NOT blink, breathe, turn, look around, come to life, move a limb, morph or animate. The ribbons do NOT wave, flutter, or drift. Do NOT redraw, re-render, regenerate, sharpen, re-letter, restyle, or alter any part of the print. Reproduce ONLY what is visible in the reference: do NOT add, invent, complete, or reveal any extra wing, halo, emblem, symbol, accessory or detail that is not already there. Treat it as a still photograph printed on cloth.
+TEXT LOCK: The large printed word on the shirt and the small label on the jeans are a FROZEN FLAT PIXEL LAYER. Do NOT read, interpret, re-render, redraw, regenerate, sharpen, re-letter or rewrite them. Keep them sharp and identical from the first to the last frame, including the final frames. No typing, no flicker, no morph.
+FABRIC — controlled movement: The oversized t-shirt may settle and shift very subtly with his breathing, the hem tug and the weight shift, but keep the fabric movement small and controlled so the back panel stays flat and the printed graphic stays flat and undistorted — NO rippling, waving, billowing, flapping, stretching, or warping across the print or the lettering.
+CLOTHING AND ACCESSORIES LOCK: The black cap keeps its exact shape and stays plain — do NOT add any logo, text or embroidery to it. The baggy dark jeans keep their exact shape, seams, stitching and pockets. The silver chain necklace and the watch stay in place with at most a tiny natural settle — they do NOT swing, sway, stretch, multiply or change design.
+CAMERA — natural handheld, always from behind: The camera moves the way a person filming with a phone would: it drifts slowly a little closer toward him, then eases back out again, and then shifts gently to the right, with a soft, natural handheld feel throughout. Keep every move small, smooth and unhurried — never jerky, never fast, no swooping, no spinning, no zoom jumps, no hard shake. The camera stays BEHIND him at all times: it does NOT orbit, arc, or travel around to his side or in front of him, and it never reveals his face. He stays fully in frame and roughly centred, with the back print clearly visible, the whole time.
+ANTI-OUTPAINT: As the camera moves, do NOT extend, expand, outpaint, zoom out, or invent new area or new detail beyond what the reference already shows. No new people, cars, animals, buildings, or objects appear at any moment.
+ENVIRONMENT — almost still: The landscape stays static: the guardrail, the road, the distant hills, houses, fields and the sunset sky all stay exactly in place, with constant warm golden lighting. Only a very faint, soft breeze is allowed in the dry grass and weeds at the edges of the frame. The sun does not move or change, the clouds do not race, no birds, no vehicles, no lens flares appear.
+PACING: normal real-time speed, everyday human pace. No slow motion, no slow-mo, no dreamy floaty, no time-stretch or ramp.
+STYLE: warm golden-hour streetwear lifestyle clip, soft backlit sunset, cinematic but real and natural, realistic.
+NEGATIVE INSTRUCTIONS: Do not turn the man around, do not turn his body or head toward the camera, do not show his face or profile at any moment. Do not orbit, arc, or move the camera around to his side or front. Do not make him walk, step, or change position. Do not flap, spread, beat, ripple, or animate the printed wings. Do not animate, blink, breathe, turn, or bring to life the printed figure or its face. Do not wave or flutter the printed ribbons. Do not re-render, redraw, regenerate, sharpen, re-letter, or rewrite the printed word on the shirt or the label on the jeans. No typewriter text effect. Do not draw, add, or invent any new graphic, shape, line, or letter on the shirt or cap. Do not let the hand cover, smear, drag, or distort the print. Do not add a second, other, or extra hand, arm, or fingers. Do not warp the hands, fingers, or body proportions. Do not ripple, billow, stretch, or warp the fabric across the print. Do not swing or multiply the chain or watch. Do not extend, outpaint, or reveal new area beyond the frame. Do not add new people, cars, animals, or objects. Do not use fast, jerky, swooping, or spinning camera motion, no hard shake, no zoom jumps. No slow motion. No cuts, no scene change.
+```
+**Variante MÁS SEGURA (si el print o las alas se mueven):** quitar el desplazamiento lateral de cámara
+(dejar solo el acercamiento/alejamiento MUY leve o cámara clavada), quitar el tirón de la playera (dejar
+solo levantar la cabeza + cambio de peso) y pasar a **2.6**.
+**Variantes de la misma familia:** de espaldas apoyado en el guardarraíl · caminando de espaldas
+(alto riesgo: mejor "in place") · mano que sube a acomodarse la gorra (misma lógica de ONE HAND ONLY) ·
+close-up solo del print (ahí sí cámara clavada).
+
+---
+
 ## 🔑 Recordatorio de modelo
 - **Kling 3.0** por defecto (más vida). **Kling 2.6** si hay texto diminuto/denso o se rompe el texto.
 - Texto chico en zona difícil que se resiste → ponerlo en **Canva/CapCut** después de animar.

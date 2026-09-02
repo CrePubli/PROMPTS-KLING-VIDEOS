@@ -5,7 +5,9 @@
 > Resultado buscado: "el anuncio estático traído suavemente a la vida" (cinemagraph premium).
 >
 > **Estado:** EN CONSTRUCCIÓN — se actualiza con cada ejemplo nuevo. El usuario dirá cuándo cerrarlo.
-> **Última actualización:** + serie F1 (portalapiceros) y serie BTS (playeras con caras impresas).
+> **Última actualización:** + G21 (persona de ESPALDAS con print en la espalda, atardecer): bloque
+> BACK VIEW LOCK, tercer modo de cámara (handheld de otra persona) y alas/plumas en la jerarquía de
+> motion-cue. Antes: serie F1 (portalapiceros) y serie BTS (playeras con caras impresas).
 > Nuevos bloques reutilizables: CONTENTS LOCK, PRINTED ART LOCK + FABRIC, SELFIE POV (manos ancladas),
 > HAND OVER PRINT, persona secundaria congelada/desenfocada. Ver sección "🧩 BLOQUES NUEVOS".
 
@@ -129,6 +131,8 @@ Do not add new elements. Do not turn this into a different scene.
 | Mano que toca/desliza sobre arte impreso | **HAND OVER PRINT** (pasa por encima sin smear/drag) | BTS |
 | Selfie en mano (se graba con su teléfono) | Cámara **NO locked** = handheld sway sutil + **manos ancladas** (brazo del tel. no baja, otra mano no desaparece) | BTS |
 | Persona secundaria lejana al fondo | **Congelar + desenfocar**, NO animar (animarla la deforma) | F1 |
+| Persona de ESPALDAS con print grande en la espalda | **BACK VIEW LOCK** (nunca se gira, cara nunca visible) + cámara siempre DETRÁS (sin orbital) | G21 |
+| Print con ALAS / plumas / capa / listones | Igual que banderas: nombrar "wings do NOT flap/spread/ripple" + no animar nada cerca | G21 |
 
 ---
 
@@ -178,7 +182,8 @@ Do not add new elements. Do not turn this into a different scene.
     (que el lado liso apenas se revele) o solo inclinar en vez de girar.
 
 13. **JERARQUÍA DE MOTION-CUE impreso (qué tiende a animarse solo, de más a menos):** BANDERAS (máx,
-    peor que fuego) > fuego/llamas > agua/olas/humo > nubes/cielo > caras/personas > objetos. Si el
+    peor que fuego) > **ALAS/plumas/capas/listones** > fuego/llamas > agua/olas/humo > nubes/cielo >
+    caras/personas > objetos. Si el
     arte impreso tiene banderas/fuego, NO le des a la escena NINGÚN permiso de movimiento cerca —
     cualquier animación (hasta un ember) se contagia a ellos pese a los negativos (FALLO #6). Caso
     extremo (mucho motion-cue + texto) → 2.6 + movimiento casi nulo.
@@ -187,9 +192,17 @@ Do not add new elements. Do not turn this into a different scene.
 
 15. **🆕 ESTILO ACTUAL: SIN TIMECODES.** Las secuencias de acción se escriben en PROSA natural
     ("First she..., then she..., finally she...") — NO usar `[00:00-00:02]`. Es como trabajamos ahora.
-16. **🆕 CÁMARA: dos modos según quién graba.** (a) Lo graban con tripié/otra persona → `locked-off`
+16. **🆕 CÁMARA: TRES modos según quién graba.** (a) Tripié / producto / hay texto pequeño → `locked-off`
     (regla #2). (b) **Selfie en su propia mano** → cámara **NO locked** = handheld sway sutil continuo
     (si no, se siente falso); pero anclar el brazo del teléfono y no perder la otra mano (bloque E).
+    (c) **🆕 Lo graba OTRA persona con el teléfono en la mano** → cámara handheld con **recorrido descrito
+    en prosa** ("drifts slowly a little closer, then eases back out, then shifts gently to the right"),
+    siempre con freno ("small, smooth, unhurried; no swooping, no spinning, no zoom jumps, no hard shake")
+    y con el sujeto "clearly in frame and roughly centred the whole time". **Solo si NO hay texto pequeño**
+    en el cuadro (regla #2 manda). Si el sujeto está de espaldas, añadir SIEMPRE "the camera stays BEHIND
+    him at all times; it does NOT orbit, arc, or travel around to his side or in front" (si no, el
+    desplazamiento lateral se convierte en orbital y le descubre la cara). Y con desplazamiento lateral,
+    **candado ANTI-OUTPAINT** (revela área nueva → la inventa). (Ejemplo: G21 espaldas atardecer.)
 17. **🆕 "MIRAR A CÁMARA" mueve la cámara (separar mirada vs cámara).** Si pides "glances up toward
     the camera" en un close-up (ej. de la playera), Kling sube/re-encuadra la cámara hacia su cara
     (asocia "mirar a cámara" = "plano de cara"). → Separar explícito: "ONLY her eyes/head glance up,
@@ -341,6 +354,28 @@ NOT deform, warp, or morph him.
 Regla: **secundario lejano = congelar + dejar desenfocado, NO animar.** (Evidencia: el amigo señalando
 salió deforme; al congelarlo se arregla.) Bonus: si subir/levantar el producto le tapaba los pies/cuerpo
 al de atrás → negativo "do not raise/lift the product upward — keep it at the same height".
+
+### G) BACK VIEW LOCK — la persona está de ESPALDAS y NO se puede girar
+Cuándo: el print/producto está en la ESPALDA (playera, mochila, gorra por detrás) y el sujeto se ve de
+espaldas. En cuanto le pides que "mire" algo, Kling tiende a **girarlo** y enseñar la cara (y con ello
+se inventa/re-esculpe una cara que no existe en la referencia).
+```
+HE NEVER TURNS AROUND (most important rule):
+The man is seen from BEHIND for the entire clip, exactly as in the reference frame. He does NOT turn
+around, turn his body, pivot, swivel, rotate, or face the camera at any moment, and his face is NEVER
+visible — not in profile, not over his shoulder, not even partially. Only the back of his head, his cap
+and his back are ever seen. He also stays in exactly the same spot: he does NOT walk, step, or change his
+standing position or distance from the camera.
+```
++ pareja obligatoria en el bloque de cámara: `the camera stays BEHIND him at all times; it does NOT orbit,
+arc, or travel around to his side or in front of him, and it never reveals his face.`
++ negativos gemelos: `Do not turn the man around... do not show his face or profile at any moment. Do not
+orbit or move the camera around to his side or front.`
+**Verbos seguros para "que mire el horizonte" estando de espaldas:** *lifts his head from looking down to
+looking straight ahead, still facing completely away* (subir la cabeza = seguro; "look at / turn to see"
+= peligro, lo gira).
+**Acomodarse la ropa sin arruinar el print:** el tirón va al **dobladillo de abajo, al costado, sobre tela
+lisa** (nunca la palma sobre el diseño → FALLO #7) + `ONE HAND ONLY` + candado de no inventar gráficos.
 
 ---
 
