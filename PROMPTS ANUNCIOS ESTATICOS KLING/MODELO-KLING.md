@@ -7,8 +7,9 @@
 > **Estado:** EN CONSTRUCCIÓN — se actualiza con cada ejemplo nuevo. El usuario dirá cuándo cerrarlo.
 > **Última actualización:** + G21 (persona de ESPALDAS con print en la espalda, atardecer): bloque
 > BACK VIEW LOCK, tercer modo de cámara (handheld de otra persona), alas/plumas en la jerarquía de
-> motion-cue, y G22 (receta de 3 piezas para MOVER una mano a un destino). Antes: serie F1
-> (portalapiceros) y serie BTS (playeras con caras impresas).
+> motion-cue, G22 (receta de 3 piezas para MOVER una mano a un destino) y G23 (pedir el desplazamiento
+> antes de la acción, accesorio chico que se borra al girar la cabeza, y contar objetos repetidos por rol).
+> Antes: serie F1 (portalapiceros) y serie BTS (playeras con caras impresas).
 > Nuevos bloques reutilizables: CONTENTS LOCK, PRINTED ART LOCK + FABRIC, SELFIE POV (manos ancladas),
 > HAND OVER PRINT, persona secundaria congelada/desenfocada. Ver sección "🧩 BLOQUES NUEVOS".
 
@@ -135,6 +136,9 @@ Do not add new elements. Do not turn this into a different scene.
 | Persona de ESPALDAS con print grande en la espalda | **BACK VIEW LOCK** (nunca se gira, cara nunca visible) + cámara siempre DETRÁS (sin orbital) | G21 |
 | Print con ALAS / plumas / capa / listones | Igual que banderas: nombrar "wings do NOT flap/spread/ripple" + no animar nada cerca | G21 |
 | Una mano debe MOVERSE a otro sitio (barandal, bolsillo, gorra) | **Destino nombrado + bloque afirmativo "MUST happen" + negativo espejo**; borrar candados que la anclen | G22 |
+| La acción exige estar CERCA de algo lejano | Pedir **el caminar primero** como acción propia + "arm keeps its natural length"; si va y vuelve → cámara clavada | G23 |
+| Accesorio chico parcialmente visible (patilla de lentes, arete) | **Nombrar la parte visible** + "do NOT disappear **especially when he turns his head**" | G23 |
+| Dos objetos IGUALES en la escena (dos pares de lentes) | Nunca "there is only ONE" → **contar y separar por rol** (par A puesto / par B en la mano) | G23 |
 
 ---
 
@@ -753,6 +757,32 @@ his body, out to the side and then forward; it does NOT cross, sweep, or pass ov
 brazo cruza por encima del diseño → oclusión = FALLO #7).
 + **Con BACK VIEW LOCK:** el "no rotes" debe decir *"not even to reach the rail"* — levantar el brazo es la
 excusa perfecta para que gire el torso.
+
+**⚠️ AMPLIACIÓN (noche/troca — G23): DOS fallos nuevos de "alcance imposible" y "accesorio que se borra".**
+1. **🆕 PIDE PRIMERO EL DESPLAZAMIENTO, LUEGO LA ACCIÓN.** Se le pidió dejar unos lentes en el capó de una
+   troca **desde donde estaba parado** (a varios metros) → Kling **estiró el brazo** de forma imposible y
+   "no se veía real". Kling NO añade por su cuenta los pasos que faltan: ejecuta el gesto desde donde está,
+   deformando el cuerpo. → Si la acción exige estar cerca, **escribe el caminar como acción propia y
+   afirmativa** ("two small calm steps FORWARD, until he is close enough to comfortably reach the bonnet…
+   then two small steps BACKWARD, returning to exactly the spot he started from") + negativo
+   `do not stretch, extend, or elongate his arm across the gap; do not skip the walk` + candado de
+   proporción `his arm keeps its normal natural length at all times`.
+   **Bonus de encuadre:** si va y VUELVE al mismo punto → **cámara CLAVADA** (el frame final vuelve a ser
+   el de la referencia y el print no se re-renderiza con travelling). Mejor que "la cámara lo sigue".
+2. **🆕 ACCESORIO PEQUEÑO Y PARCIALMENTE VISIBLE = DESAPARECE AL GIRAR LA CABEZA.** Traía lentes de sol
+   puestos (de espaldas solo se ve la **patilla** al costado de la cabeza) y **se borraban justo al girar
+   la cabeza**: el giro re-renderiza esa zona y el modelo no tiene evidencia suficiente para reconstruir
+   un detalle tan chico → lo omite. Aplica igual a aretes, audífonos, cadenitas finas, palillos, colillas.
+   → Candado de 3 partes: (a) declarar que lo trae PUESTO todo el clip; (b) **nombrar la parte visible**
+   ("the dark temple arm runs along the side of his head, under the brim of the hat and over his ear");
+   (c) prohibirlo **atado al gesto que lo borra**: "they do NOT disappear, vanish, fade or dissolve at ANY
+   moment — **especially NOT when he turns his head**; every time his head turns, they are still there."
+3. **🆕 NUNCA digas "there is only ONE pair" si en la escena hay DOS.** El prompt viejo tenía un candado de
+   "un solo par de lentes" mientras él traía unos puestos Y otros en la mano → invita a fusionarlos o
+   borrar uno. → **Contar y separar por rol**: "pair A is the one he is WEARING… pair B is the one he is
+   HOLDING… pair B never ends up on his face and pair A never ends up in his hand or on the bonnet; do not
+   merge, swap, duplicate or delete either pair; do not create a third pair." (Primo de la regla "nombrar
+   CADA instancia" del #12.)
 
 **Regla general (acercar en POV / selfie):**
 - "Acercar a la cámara" en POV = **subir/extender el brazo hacia el lente**, NO mover la cámara. Redáctalo
