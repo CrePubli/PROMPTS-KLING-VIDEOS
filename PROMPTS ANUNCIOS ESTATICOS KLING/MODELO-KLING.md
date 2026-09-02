@@ -6,8 +6,9 @@
 >
 > **Estado:** EN CONSTRUCCIÓN — se actualiza con cada ejemplo nuevo. El usuario dirá cuándo cerrarlo.
 > **Última actualización:** + G21 (persona de ESPALDAS con print en la espalda, atardecer): bloque
-> BACK VIEW LOCK, tercer modo de cámara (handheld de otra persona) y alas/plumas en la jerarquía de
-> motion-cue. Antes: serie F1 (portalapiceros) y serie BTS (playeras con caras impresas).
+> BACK VIEW LOCK, tercer modo de cámara (handheld de otra persona), alas/plumas en la jerarquía de
+> motion-cue, y G22 (receta de 3 piezas para MOVER una mano a un destino). Antes: serie F1
+> (portalapiceros) y serie BTS (playeras con caras impresas).
 > Nuevos bloques reutilizables: CONTENTS LOCK, PRINTED ART LOCK + FABRIC, SELFIE POV (manos ancladas),
 > HAND OVER PRINT, persona secundaria congelada/desenfocada. Ver sección "🧩 BLOQUES NUEVOS".
 
@@ -133,6 +134,7 @@ Do not add new elements. Do not turn this into a different scene.
 | Persona secundaria lejana al fondo | **Congelar + desenfocar**, NO animar (animarla la deforma) | F1 |
 | Persona de ESPALDAS con print grande en la espalda | **BACK VIEW LOCK** (nunca se gira, cara nunca visible) + cámara siempre DETRÁS (sin orbital) | G21 |
 | Print con ALAS / plumas / capa / listones | Igual que banderas: nombrar "wings do NOT flap/spread/ripple" + no animar nada cerca | G21 |
+| Una mano debe MOVERSE a otro sitio (barandal, bolsillo, gorra) | **Destino nombrado + bloque afirmativo "MUST happen" + negativo espejo**; borrar candados que la anclen | G22 |
 
 ---
 
@@ -730,6 +732,28 @@ subió / no se acercó** (todo quedó congelado).
    ("the forearm RISES up toward the camera lens, the bracelet grows a little larger in frame; this is
    the main action and MUST clearly happen") y aclarar que **lo que se mueve es el BRAZO, no la cámara**
    (no congelar el brazo). Añadir negativo: "do NOT keep the arm frozen/static — the forearm MUST rise."
+**⚠️ AMPLIACIÓN VALIDADA (rancho: la mano NUNCA se movía del costado — G22):** hombre de espaldas en una
+cerca, una mano ya en el barandal y la otra colgando. Se pidió "se acomoda la playera tomando el DOBLADILLO
+a su costado" → la mano **se quedó ahí toda la toma**, nunca hizo nada más.
+**Causa raíz (generaliza el punto 2 de arriba):** el prompt le dio a la mano un destino que era **su propio
+costado**, y encima el bloque de manos decía *"hands stay low, at his sides"* = candado extra que la ancla.
+Kling no mueve una extremidad "porque sí": necesita **un destino nombrado**.
+**🆕 RECETA PARA MOVER UNA MANO/BRAZO A OTRO SITIO (3 piezas, siempre juntas):**
+1. **Destino nombrado y concreto** en la secuencia: *"lifts up and forward and comes to REST ON THE TOP RAIL
+   OF THE WHITE FENCE in front of him, so that by the end both hands rest on the rail"* (no "se mueve", no
+   "se acomoda": DÓNDE termina).
+2. **Bloque afirmativo de acción principal:** *"THE ARM MUST ACTUALLY MOVE TO THE FENCE (this is the main
+   action): ... This movement MUST plainly happen and must be easy to see."*
+3. **Negativo espejo:** *"Do NOT keep the hanging arm down, frozen, or static at his side — it MUST rise and
+   rest on the rail; do not let that hand touch, tug, hold, or rest on his shirt, hem, hip, or pocket."*
++ **Revisar que ningún otro bloque la ancle** (borrar "hands stay low at his sides" y cualquier "the hand
+stays where it is"). Los candados de manos son para las manos que NO deben moverse; nombra cuál es cuál.
++ **Con print en la espalda:** añadir *"THE ARM TRAVELS OUTSIDE THE SHIRT — it rises around the OUTSIDE of
+his body, out to the side and then forward; it does NOT cross, sweep, or pass over his back"* (si no, el
+brazo cruza por encima del diseño → oclusión = FALLO #7).
++ **Con BACK VIEW LOCK:** el "no rotes" debe decir *"not even to reach the rail"* — levantar el brazo es la
+excusa perfecta para que gire el torso.
+
 **Regla general (acercar en POV / selfie):**
 - "Acercar a la cámara" en POV = **subir/extender el brazo hacia el lente**, NO mover la cámara. Redáctalo
   como acción física clara del brazo, y separa "el brazo se mueve" de "la cámara no se mueve". Si sólo
